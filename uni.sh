@@ -1,3 +1,9 @@
+#!/bin/bash
+
+# Обновляем систему
+sudo apt update && sudo apt upgrade -y
+
+# Устанавливаем Docker
 sudo apt install -y docker.io
 
 # Устанавливаем Docker Compose
@@ -26,4 +32,3 @@ docker-compose up -d
 # Проверяем ноду с помощью curl
 curl -d '{"id":1,"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["latest",false]}' \
   -H "Content-Type: application/json" http://localhost:8545
-  

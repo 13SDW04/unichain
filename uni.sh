@@ -32,3 +32,10 @@ docker-compose up -d
 # Проверяем ноду с помощью curl
 curl -d '{"id":1,"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["latest",false]}' \
   -H "Content-Type: application/json" http://localhost:8545
+
+# Проверяем логи
+echo "Логи unichain-node-op-node-1:"
+docker logs unichain-node-op-node-1
+
+echo "Логи unichain-node-execution-client-1:"
+docker logs unichain-node-execution-client-1
